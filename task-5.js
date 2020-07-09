@@ -1,47 +1,40 @@
 "use strict";
 
-let userInput = prompt('Введите вашу страну');
-userInput.toLocaleLowerCase();
+const userInput = prompt('Введите вашу страну');
 let price;
+const Китай = 100;
+const Чили = 250;
+const Австралия = 170;
+const Индия = 80;
+const Ямайка = 120;
 
-// normalizeduserInput =  + userInput.slice(1) + userInput.toLowerCase();
+const normalizeduserInput = userInput [0].toLocaleUpperCase() + userInput.slice(1).toLocaleLowerCase();
 
-
-if (userInput === null) {
-    alert ('Отменено пользователем!');
-    } 
-    else if ('country' === ' ') {
-    alert ('Страна не указана');
-    } 
+if (userInput !== null);
      
-switch(userInput) {
+switch(normalizeduserInput) {
     case 'Китай':
-    price = 100;
+    alert (`Доставка в ${userInput} будет стоить ${Китай} кредитов`);
+    break; 
+        
+    case 'Чили':
+    alert (`Доставка в ${userInput} будет стоить ${Чили} кредитов`);
     break; 
 
-    case 'Чили':
-    price = 250;
-    break;
-
     case 'Австралия':
-    price = 170;
-    break;
+    alert (`Доставка в ${userInput} будет стоить ${Австралия} кредитов`);
+    break; 
 
     case 'Индия':
-    price = 80;
+    alert (`Доставка в ${userInput} будет стоить ${Индия} кредитов`);
     break; 
 
     case 'Ямайка':
-    price = 120;
+    alert (`Доставка в ${userInput} будет стоить ${Ямайка} кредитов`);
     break; 
 
     default:
-        price = -1;
-}
-
-if (price !== -1) {
-    alert (`Доставка в ${userInput} будет стоить ${price} кредитов`);
-} else {
-    alert(`В вашей стране доставка не доступна`);
+        alert(`В вашей стране доставка не доступна`);
+       
 }
 

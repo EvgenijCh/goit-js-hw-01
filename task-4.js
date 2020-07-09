@@ -1,24 +1,20 @@
 "use strict";
 
-let credits;
-let pricePerDroid;
-let totalPrice;
-let userInput = prompt ('Введите кол-во дроидов которое Вы хотите купить')
+const userInput = prompt ('Введите кол-во дроидов которое Вы хотите купить')
 
-credits = 23580;
-pricePerDroid = 3000;
+const credits = 23580;
+const pricePerDroid = 3000;
 
 if (userInput === null) {
     alert ('Отменено пользователем!');
-} else {
-let num = Number(userInput);
-    totalPrice = num * pricePerDroid;
+} 
+else {
+const totalPrice = userInput * pricePerDroid;
 
  if (totalPrice > credits) {
     alert ('Недостаточно средств на счету!');
 } else {
-let rest = credits - totalPrice;
-    alert(`Вы купили ${num} дроидов, на счету осталось ${rest} кредитов.`);
+    alert(`Вы купили ${userInput} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
 }
 }
 
