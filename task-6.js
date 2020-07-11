@@ -5,10 +5,10 @@ let total = 0;
   
 do {
 input = prompt("Введите число");
-if (Number.isNaN(Number(input))) {
+if (Number.isNaN(+input)) {
 alert ("Было введено не число,попробуйте еще раз");
 }
-total += Number(input);
+total += +input;
 } while (input !== null); 
 alert (`Общая сумма чисел равна ${total}`)
 
