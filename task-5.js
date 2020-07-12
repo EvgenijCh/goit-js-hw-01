@@ -1,37 +1,34 @@
-"use strict";
-const china = "Китай";
-const chili = "Чили";
-const australia = "Австралия";
-const india = "Индия";
-const jamaika = "Ямайка";
-const userInput = prompt("Введите вашу страну");
-let price;
-let message;
+'use strict';
+const china = 'Китай';
+const chinaprice = 100;
+const chile = 'Чили';
+const chiliprice = 250;
+const australia = 'Австралия';
+const australiaprice = 170;
+const india = 'Индия';
+const indiaprice = 80;
+const jamaika = 'Ямайка';
+const jamaikaprice = 120;
+const userInput = prompt('Введите вашу страну');
 if (userInput === null) {
-    alert(`Отменено пользователем!`);
+  alert(`Отменено пользователем!`);
 } else {
-    userInput.toLowerCase();
-    switch (userInput) {
-        case "Китай":
-            price = 100;
-            alert(`Доставка в ${userInput} будет стоить ${price} кредитов`);
-            break;
-        case "Чили":
-            price = 250;
-            alert(`Доставка в ${userInput} будет стоить ${price} кредитов`);
-            break;
-        case "Австралия":
-            price = 170;
-            alert(`Доставка в ${userInput} будет стоить ${price} кредитов`);
-            break;
-        case "Индия":
-            price = 80;
-            alert(`Доставка в ${userInput} будет стоить ${price} кредитов`);
-        case "Ямайка":
-            price = 120;
-            alert(`Доставка в ${userInput} будет стоить ${price} кредитов`);
-            break;
-        default:
-            alert(`В вашей стране доставка не доступна`);
-    }
+  switch (userInput.toLowerCase()) {
+    case 'китай':
+      alert(`Доставка в ${userInput} будет стоить ${chinaprice} кредитов`);
+      break;
+    case 'чили':
+      alert(`Доставка в ${userInput} будет стоить ${chiliprice} кредитов`);
+      break;
+    case 'австралия':
+      alert(`Доставка в ${userInput} будет стоить ${australiaprice} кредитов`);
+      break;
+    case 'индия':
+      alert(`Доставка в ${userInput} будет стоить ${indiaprice} кредитов`);
+    case 'ямайка':
+      alert(`Доставка в ${userInput} будет стоить ${jamaikaprice} кредитов`);
+      break;
+    default:
+      alert(`В вашей стране доставка не доступна`);
+  }
 }
